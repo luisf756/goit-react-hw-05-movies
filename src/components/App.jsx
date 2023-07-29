@@ -2,9 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
 import Home from "../pages/Home";
 import Movies from "../pages/Movies";
-import MovieDetails from "../pages/MovieDetails";
+// import MovieDetails from "../pages/MovieDetails";
 import { Container, Header, Logo, Link } from "./app.styled";
-// import NotFound from "path/to/pages/NotFound";
 // import ProductDetails from "path/to/pages/ProductDetails";
 
 export const App = () => {
@@ -33,7 +32,7 @@ export const App = () => {
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/movies/:productId" element={<MovieDetails />} />
+        {/* <Route path="/movies/:productId" element={<MovieDetails />} /> */}
           {/* <Route path="mission" element={<Mission />} />
           <Route path="team" element={<Team />} />
           <Route path="reviews" element={<Reviews />} /> */}

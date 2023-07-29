@@ -1,3 +1,4 @@
+import TrendingMovies from '../components/TrendingMovies/TrendingMovies';
  const Home = () => {
     return (
       <main>
@@ -6,6 +7,7 @@
         <p>
           list of trending movies! 
         </p>
+        <TrendingMovies/>
       </main>
     );
   };
