@@ -18,7 +18,7 @@ export default function MoviesListItem({ data }) {
             </div>
             <div className={s.description}>
               <h3 className={s.title}>{title}</h3>
-              {/* <ul className={s.genres}>
+              <ul className={s.genres}>
                 {genres.length>0 
                   ? genres.map(({ id, name }, index) => (
                       <li className={s.genres__item} key={id}>
@@ -26,7 +26,7 @@ export default function MoviesListItem({ data }) {
                       </li>
                     ))
                   : <p className={s.genres__item}>Other</p>}
-              </ul> */}
+              </ul>
               <p className={s.info}>
                 {vote_average !== 0
                   ? <span className={s.rating}><i className="fa fa-star-o"></i>&#160;{vote_average}</span>

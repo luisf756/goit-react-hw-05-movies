@@ -1,9 +1,9 @@
-import { NamesGeners } from "./namesGeners";
+import { namesGeners } from "./namesGeners";
 
 // Normalize the data
-export function normalizedData(results) {
+export default function normalizedData(results) {
     return results.map(movie => {
-        const genres = createGenres(NamesGeners, movie.genre_ids);
+        const genres = createGenres(namesGeners, movie.genre_ids);
         let listOfGenres = genres[0];
         
         if (listOfGenres.length > 3) {

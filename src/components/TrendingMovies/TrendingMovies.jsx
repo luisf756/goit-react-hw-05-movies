@@ -12,7 +12,7 @@ export default function TrendingMovies() {
         fetchTrendingMovies()
             .then(data => {
                 console.log(data)
-                setMovies(data.results);
+                setMovies(normalizedData(data.results));
             });
     }, [])
 

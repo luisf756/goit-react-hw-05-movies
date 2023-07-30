@@ -1,4 +1,4 @@
-export const NamesGeners = [
+export const namesGeners = [
     {
       id: 28,
       name: 'Action',
