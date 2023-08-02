@@ -155,7 +155,7 @@ const MovieDetails = () => {
                 <div className={s.additional}>
                     <Link to={`/movies/${movieId}/cast`} className={s.additional__button}><button>Cast</button></Link>
                     <Link to={`/movies/${movieId}/reviews`} className={s.additional__button}><button>Reviews</button></Link>
-                    <Link to={`/movies/${movieId}/videos`} className={s.additional__button}><button>Trailer</button></Link>
+                    {/* <Link to={`/movies/${movieId}/videos`} className={s.additional__button}><button>Trailer</button></Link> */}
                 </div>
         </>
     }

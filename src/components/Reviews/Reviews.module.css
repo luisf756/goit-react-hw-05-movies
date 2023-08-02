@@ -1,0 +1,234 @@
+.contentR{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.reviews{
+    width: 100%;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    gap: 40px;
+
+    margin: 40px auto;
+}
+.reviews__item{
+    /* background-color: var(--card2-color); */
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    border-radius: 30px;
+
+    width: auto;
+    min-width: 80%;
+    max-width: 80%;
+}
+.author_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.author_info h4{
+    margin: 0;
+}
+.author_info p{
+    margin: 0;
+}
+.avatar{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+
+}
+
+.Read_More{
+    position: absolute;
+
+    right: 0;
+}
+
+.read_more_less__more{
+    position: absolute;
+    transform: translate(0%, 180%);
+    height: 20px;
+    
+}
+.read_more_less__less{
+    position: absolute;
+    transform: translate(0%, 180%);
+    height: 20px;
+    
+}
+.opinionUSer{
+   display: flex;
+   /* flex-direction: row-reverse;
+    align-items: end; */
+    width: auto;
+    max-width: 100%;
+    font-size: 16px;
+}
+#text{
+    width: auto;
+    max-width: 100%;
+    
+}
+.interactive{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.interactive svg{
+    cursor: pointer;
+    width: 20px;
+}
+.iconmessage{
+    fill: var(--heartstroke);   
+}
+.iconheart{
+    fill: var(--heartfill);   
+    stroke: var(--heartstroke);   
+    stroke-width: 2.5px;
+
+    transition: all 250ms;
+}
+.iconshare{
+    fill: var(--heartstroke);   
+}
+.iconheart:hover{
+    transition: all ease 200ms;
+    /* stroke: var(--accent-color);   
+    fill: var(--accent-color); */
+}
+.iconheart:focus{
+    transition: all ease 200ms;
+    /* stroke: var(--accent-color);   
+    fill: var(--accent-color); */
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .reviews__item{
+        /* background-color: var(--card2-color); */
+        padding: 20px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        gap: 20px;
+    
+        border-radius: 30px;
+    
+        width: 60vw;
+        min-width: 50vw;
+
+    }
+    .container{
+        padding: 0;
+    }
+    .avatar{
+        width: 30px;
+        height: 30px;
+    }
+
+    .interactive{
+        margin-top: 20px;
+    }
+    .opinionUSer{
+        display: flex;
+        /* flex-direction: row-reverse;
+         align-items: end; */
+         width: auto;
+         max-width: 100%;
+         font-size: 12px;
+        }    
+    
+
+        .read_more_less__more{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+        .read_more_less__less{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+    }
+
+@media screen and (max-width: 300px) {
+
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .reviews{
+        width: 90vw;
+        padding: 0;
+        transform: translate(-5%);
+    }
+
+    .reviews__item{
+        /* background-color: var(--card2-color); */
+        padding: 20px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        gap: 20px;
+    
+        border-radius: 30px;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+    }
+    .container{
+        padding: 0;
+    }
+    .avatar{
+        width: 30px;
+        height: 30px;
+    }
+
+    .interactive{
+        margin-top: 20px;
+    }
+    .opinionUSer{
+        height: auto;
+        /* min-height: 150px; */
+        /* display: flex; */
+        /* flex-direction: row-reverse; */
+         /* align-items: end; */
+         width: auto;
+         max-width: 100%;
+         font-size: 12px;
+    } 
+        .read_more_less__more{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+        .read_more_less__less{
+            position: absolute;
+            transform: translate(0%, 300%);
+            height: 20px;
+            
+        }
+    }

@@ -1,9 +1,9 @@
-import { Wrapper, Input } from "./SearchBoxStylesd";//Icon
+import { Wrapper, Input, Icon } from "./SearchBoxStylesd";//Icon
 
 export const SearchBox = ({ value, onChange }) => {
   return (
     <Wrapper>
-      {/* <Icon /> */}
+      <Icon />
       <Input
         type="text"
         value={value}

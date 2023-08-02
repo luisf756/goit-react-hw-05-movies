@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 import Movies from "../pages/Movies";
 import MovieDetails from "../pages/MovieDetails";
 import { Container, Header, Logo, Link } from "./app.styled";
+import Cast from "./Cast/Cast";
+import Reviews from "./Reviews/Reviews";
+// import Trailer from "./Trailer/Trailer";
 // import ProductDetails from "path/to/pages/ProductDetails";
 
 export const App = () => {
@@ -33,9 +36,10 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />}></Route>
         <Route path="/movies/:movieId" element={<MovieDetails />} >
-          {/* <Route path="mission" element={<Mission />} />
-          <Route path="team" element={<Team />} />
-          <Route path="reviews" element={<Reviews />} /> */}
+          <Route path="cast" element={<Cast />} />
+          {/* <Route path="trailer" element={<Trailer />} /> */}
+          <Route path="reviews" element={<Reviews />} />
+          
         </Route>
         
         {/* <Route path="/products" element={<Products />} />

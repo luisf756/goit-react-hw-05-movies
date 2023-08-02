@@ -1,40 +1,48 @@
-// import { Link, Outlet } from "react-router-dom";
 
-//  const About = () => {
-
-//   return (
-//     <div>
-//       <h2>Find movie</h2>
-      
-//     </div>
-//   );
-// };
-
-// export default About
-
-import { useSearchParams } from "react-router-dom";
-// import { ProductList } from "../components/ProductList";
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+// import { useSearchParams } from "react-router-dom";
 import { SearchBox } from "../components/SearchBox/SearchBox";
-// import { getProducts } from "../fakeAPI";
+import SearchedMovies from '../components/SearchedMovies/SearchedMovies';
+
 
 const Movies = () => {
-  // const movies = getProducts();
-  const [searchParams, setSearchParams] = useSearchParams();
-  // const movieName = searchParams.get("name") ?? "";
+  
+  const [searchParams, setSearchParams] = useState('');
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+  const query = new URLSearchParams(location.search).get('query') ?? '';
 
-  // const visibleMovies = products.filter((product) =>
-  //   product.name.toLowerCase().includes(productName.toLowerCase())
-  // );
 
   // const updateQueryString = (name) => {
   //   const nextParams = name !== "" ? { name } : {};
   //   setSearchParams(nextParams);
+    
   // };
-
+  const handleSummit = searchQueryValue => {
+    if (searchParams === searchQueryValue) {
+        return //toast.info("Input new search query.");
+    }
+  
+    navigate(`${location.pathname}?query=${searchQueryValue}`);
+  
+    setSearchParams(searchQueryValue);
+  }
+  
+  useEffect(() => {
+    if (query !== '') {
+      setSearchParams(query);
+    }
+  }, [query])
+  // console.log(searchParams)
+//value={movieName}
   return (
     <main>
-      {/* <SearchBox value={movieName} onChange={updateQueryString} /> */}
-      {/* <ProductList products={visibleProducts} /> */}
+      <h2>Find movie</h2>
+      <SearchBox  onChange={handleSummit} /> 
+      
+      <SearchedMovies searchQuery={ searchParams }/>
     </main>
   );
 };
