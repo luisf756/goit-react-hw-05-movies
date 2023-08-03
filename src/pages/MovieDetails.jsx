@@ -94,6 +94,34 @@ const MovieDetails = () => {
     {movie &&
     <>
         <div className={s.details}>
+            
+            <div className={s.image_wrapper}>
+                <div className={s.imagecont}>
+
+                {movie.poster_path
+                
+                ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} className={s.image}/>
+                : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={movie.original_title} className={s.image} />
+                }
+                
+                <h2 className={s.title}>{movie.original_title}</h2>
+                </div>
+                <div className={s.title_wrapper}>
+                    <div>
+                        <h1 className={s.titleDecript}>Sinopsis</h1>
+                        <p className={s.overview}>{movie.overview}</p>
+                    </div>
+                        <br />
+                    <div>
+                        <h3>Movie Tagline</h3>
+                        {movie.tagline !== ""
+                            // Checking for dot at the end of a string with tagline
+                            ? <p className={s.tagline}>"{movie.tagline}"</p>
+                            : ''
+                        }
+                    </div>
+                </div>
+            </div>
             <div className={s.description}>
                 <h1 className={s.titleDecript}>Others</h1>
                 <ul className={s.info}>
@@ -123,39 +151,10 @@ const MovieDetails = () => {
                 
 
             </div>
-
-            <div className={s.image_wrapper}>
-                <div className={s.imagecont}>
-
-                {movie.poster_path
-                
-                ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} className={s.image}/>
-                : <img src='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg' alt={movie.original_title} className={s.image} />
-                }
-                
-                <h2 className={s.title}>{movie.original_title}</h2>
-                </div>
-                <div className={s.title_wrapper}>
-                    <div>
-                        <h1 className={s.titleDecript}>Sinopsis</h1>
-                        <p className={s.overview}>{movie.overview}</p>
-                    </div>
-                        <br />
-                    <div>
-                        <h3>Movie Tagline</h3>
-                        {movie.tagline !== ""
-                            // Checking for dot at the end of a string with tagline
-                            ? <p className={s.tagline}>"{movie.tagline}"</p>
-                            : ''
-                        }
-                    </div>
-                </div>
-            </div>
         </div>
                 <div className={s.additional}>
                     <Link to={`/movies/${movieId}/cast`} className={s.additional__button}><button>Cast</button></Link>
                     <Link to={`/movies/${movieId}/reviews`} className={s.additional__button}><button>Reviews</button></Link>
-                    {/* <Link to={`/movies/${movieId}/videos`} className={s.additional__button}><button>Trailer</button></Link> */}
                 </div>
         </>
     }

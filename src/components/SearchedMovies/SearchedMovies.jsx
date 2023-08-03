@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 // import { toast } from 'react-toastify';
+import Notiflix from 'notiflix';
 import PropTypes from 'prop-types';
 import MoviesList from '../ListOfMovies/ListOfMovie';
 import MoviesListItem from '../MovieListItem/MoviesListItem';
 import normalizedData from '../../services/normalizedData';
 import { fetchMovies } from '../../services/fech.api';
-// import s from './SearchedMovies.module.css';
+
 
 export default function SearchedMovies({searchQuery}) {
     const [movies, setMovies] = useState([]);
@@ -14,7 +15,7 @@ export default function SearchedMovies({searchQuery}) {
         if (searchQuery === '') {
             return;
         }
-        // console.log(movieName)
+        
         fetchMovies(searchQuery)
             .then(data => { 
                 if (data.total_results > 0) {
@@ -23,7 +24,11 @@ export default function SearchedMovies({searchQuery}) {
                 
                 else {
                     setMovies([]);
-                    // return toast.error("Sorry, there are no images matching your search query. Please try again.");
+                    Notiflix.Report.info(
+                        'Sorry, data is empty',
+                        ' You can change your Search',
+                        'Got it!'
+                      );
                 }
             });
 }, [searchQuery])

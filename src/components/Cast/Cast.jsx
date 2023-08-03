@@ -26,7 +26,7 @@ export default function Cast() {
                             }</div>
                             <div className={s.name_wrapper}>
                                 <p className={s.name}>{ original_name }</p>
-                                <p className={s.character}>{character}</p>
+                                <p className={s.character}>Character: {character}</p>
                             </div>
                         </a>
                     </li>

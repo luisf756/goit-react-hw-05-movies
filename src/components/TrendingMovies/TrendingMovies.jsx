@@ -3,7 +3,7 @@ import MoviesList from '../ListOfMovies/ListOfMovie';
 import MoviesListItem from '../MovieListItem/MoviesListItem';
 import normalizedData from '../../services/normalizedData';
 import { fetchTrendingMovies } from '../../services/fech.api';
-// import s from './TrendingMovies.module.css';
+
 
 export default function TrendingMovies() {
     const [movies, setMovies] = useState([]);

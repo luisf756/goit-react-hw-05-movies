@@ -19,7 +19,7 @@
     margin: 40px auto;
 }
 .reviews__item{
-    /* background-color: var(--card2-color); */
+    background-color: #fdf5f5;
     padding: 40px;
 
     display: flex;
@@ -74,8 +74,6 @@
 }
 .opinionUSer{
    display: flex;
-   /* flex-direction: row-reverse;
-    align-items: end; */
     width: auto;
     max-width: 100%;
     font-size: 16px;
@@ -95,34 +93,34 @@
     width: 20px;
 }
 .iconmessage{
-    fill: var(--heartstroke);   
+    fill: #9e9292;   
 }
 .iconheart{
-    fill: var(--heartfill);   
-    stroke: var(--heartstroke);   
+    fill: #9e9292;   
+    stroke: #9e9292;   
     stroke-width: 2.5px;
 
     transition: all 250ms;
 }
 .iconshare{
-    fill: var(--heartstroke);   
+    fill: #9e9292;   
 }
 .iconheart:hover{
     transition: all ease 200ms;
-    /* stroke: var(--accent-color);   
-    fill: var(--accent-color); */
+    stroke: #ccb4b4;   
+    fill: #ccb4b4;
 }
 .iconheart:focus{
     transition: all ease 200ms;
-    /* stroke: var(--accent-color);   
-    fill: var(--accent-color); */
+    stroke: #ccb4b4;  
+    fill: #ccb4b4;
 }
 
 @media screen and (max-width: 600px) {
 
 
     .reviews__item{
-        /* background-color: var(--card2-color); */
+        background-color: #9c0101;
         padding: 20px;
     
         display: flex;
@@ -149,8 +147,6 @@
     }
     .opinionUSer{
         display: flex;
-        /* flex-direction: row-reverse;
-         align-items: end; */
          width: auto;
          max-width: 100%;
          font-size: 12px;
@@ -184,7 +180,7 @@
     }
 
     .reviews__item{
-        /* background-color: var(--card2-color); */
+        background-color: #ccb4b4;;
         padding: 20px;
     
         display: flex;
@@ -211,10 +207,10 @@
     }
     .opinionUSer{
         height: auto;
-        /* min-height: 150px; */
-        /* display: flex; */
-        /* flex-direction: row-reverse; */
-         /* align-items: end; */
+        min-height: 150px;
+        display: flex;
+        flex-direction: row-reverse;
+         align-items:flex-end;
          width: auto;
          max-width: 100%;
          font-size: 12px;
